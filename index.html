@@ -41,13 +41,23 @@
     </script>
 
 <script>
-  function openMultipleWindows() {
-    // Open multiple windows of the same site
-    window.open('https://redirectgg.github.io', '_blank', 'width=800,height=600');
+  function openRandomPositionWindow() {
+    // Generate random positions for the window
+    const width = 800;
+    const height = 600;
+    const maxX = window.innerWidth - width;  // Max horizontal position
+    const maxY = window.innerHeight - height;  // Max vertical position
+    
+    // Get random positions within the available screen area
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    
+    // Open the window at the random position
+    window.open('https://redirectgg.github.io/hacked', '_blank', `width=${width},height=${height},top=${randomY},left=${randomX}`);
   }
 
-  // Call the function to open a new window every time the page is loaded or reloaded
-  openMultipleWindows();
+  // Open the window every time the page reloads or is revisited
+  openRandomPositionWindow();
 </script>
 
 
