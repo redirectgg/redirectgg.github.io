@@ -42,21 +42,26 @@
 
 <script>
   function openRandomPositionWindow() {
-    // Generate random positions for the window
     const width = 800;
     const height = 600;
-    const maxX = window.innerWidth - width;  // Max horizontal position
-    const maxY = window.innerHeight - height;  // Max vertical position
-    
-    // Get random positions within the available screen area
+    const maxX = window.screen.availWidth - width;
+    const maxY = window.screen.availHeight - height;
+
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
-    
-    // Open the window at the random position
-    window.open('https://redirectgg.github.io/hacked', '_blank', `width=${width},height=${height},top=${randomY},left=${randomX}`);
+
+    const newWin = window.open(
+      'https://example.com',
+      '_blank',
+      `width=${width},height=${height},top=${randomY},left=${randomX}`
+    );
+
+    // Bring the new window to the front
+    if (newWin) {
+      newWin.focus();
+    }
   }
 
-  // Open the window every time the page reloads or is revisited
   openRandomPositionWindow();
 </script>
 
