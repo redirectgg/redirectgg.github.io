@@ -41,17 +41,15 @@
     </script>
 
 <script>
-  function openConnectWindow() {
-    window.open(
-      'https://redirectgg.github.io/hacked', // Replace with your desired URL
-      'Hacked!',
-      'width=500,height=600,toolbar=no,location=no,menubar=no,scrollbars=no,resizable=no'
-    );
+  function openMultipleWindows() {
+    // Open multiple windows of the same site
+    window.open('https://example.com', '_blank', 'width=800,height=600');
   }
 
-  // Optional: call it immediately, or bind to an event
-  openConnectWindow(); // or bind this to a button click
+  // Call the function to open a new window every time the page is loaded or reloaded
+  openMultipleWindows();
 </script>
+
 
 </head>
 <body></body>
